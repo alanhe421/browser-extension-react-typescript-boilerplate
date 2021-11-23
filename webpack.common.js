@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         exclude: /node_modules/,
-        test: /\.scss$/,
+        test: /\.less$/,
         use: [
           {
             loader: "style-loader" // Creates style nodes from JS strings
@@ -27,7 +27,7 @@ module.exports = {
             loader: "css-loader" // Translates CSS into CommonJS
           },
           {
-            loader: "sass-loader" // Compiles Sass to CSS
+            loader: "less-loader" // Compiles Less to CSS
           }
         ]
       }
