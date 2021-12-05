@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './Popup.less';
 import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
+import { Controller, useForm } from 'react-hook-form';
 
 export default function Popup() {
   useEffect(() => {
@@ -22,5 +23,46 @@ function CustomRoutes() {
 }
 
 function LoginPage() {
-  return <>login page</>;
+  const {
+    control, formState: {
+      isValid,
+    },
+  } = useForm({
+    mode: 'onBlur',
+  });
+
+  return <>
+    <form>
+      <label htmlFor={'username'}>
+        用户名
+        <Controller name={'username'}
+                    control={control}
+                    rules={{
+                      required: '请输入用户名',
+                    }
+                    }
+                    render={({ field }) => {
+                      return <input  {...field}/>;
+                    }
+                    }/>
+      </label>
+      <label htmlFor={'password'}>
+        密码
+        <Controller name={'password'}
+                    control={control}
+                    rules={{
+                      required: '请输入密码',
+                    }
+                    }
+                    render={({ field }) => {
+                      return <input  {...field}/>;
+                    }
+                    }/>
+      </label>
+      <button disabled={!isValid}>
+        登录
+      </button>
+    </form>
+
+  </>;
 }
