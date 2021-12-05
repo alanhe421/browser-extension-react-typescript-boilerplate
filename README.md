@@ -4,16 +4,11 @@
 
 ## include
 
-1. TypeScript
-2. Less
+1. TypeScript`类型安全`
+2. Less`样式管理`
 3. React-Router`多页面路由管理`
-
-## Building
-
-1. Clone repo
-2. `npm i`
-3. `npm run dev` to compile once or `npm run watch` to run the dev task in watch mode
-4. `npm run build` to build a production (minified) version
+4. localforage`存储方案，方便使用websql，localstorage`
+5. react-hook-form`表单校验`
 
 ## Installation
 
