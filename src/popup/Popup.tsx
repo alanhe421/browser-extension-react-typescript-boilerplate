@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './Popup.less';
+import { Form, Input, Button } from 'tea-component';
 import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 
@@ -31,38 +32,35 @@ function LoginPage() {
     mode: 'onBlur',
   });
 
-  return <>
-    <form>
-      <label htmlFor={'username'}>
-        用户名
-        <Controller name={'username'}
-                    control={control}
-                    rules={{
-                      required: '请输入用户名',
-                    }
-                    }
-                    render={({ field }) => {
-                      return <input  {...field}/>;
-                    }
-                    }/>
-      </label>
-      <label htmlFor={'password'}>
-        密码
-        <Controller name={'password'}
-                    control={control}
-                    rules={{
-                      required: '请输入密码',
-                    }
-                    }
-                    render={({ field }) => {
-                      return <input  {...field}/>;
-                    }
-                    }/>
-      </label>
-      <button disabled={!isValid}>
+  return <div className={'login'}>
+    <Form layout={'vertical'}>
+      <Controller name={'username'}
+                  control={control}
+                  rules={{
+                    required: '请输入用户名',
+                  }
+                  }
+                  render={({ field }) => {
+                    return <Form.Item label={'用户名'}>
+                      <Input  {...field}/>
+                    </Form.Item>;
+                  }
+                  }/>
+      <Controller name={'password'}
+                  control={control}
+                  rules={{
+                    required: '请输入密码',
+                  }
+                  }
+                  render={({ field }) => {
+                    return <Form.Item label={'密码'}>
+                      <Input {...field}/>
+                    </Form.Item>;
+                  }
+                  }/>
+      <Button type={'primary'} disabled={!isValid}>
         登录
-      </button>
-    </form>
-
-  </>;
+      </Button>
+    </Form>
+  </div>;
 }

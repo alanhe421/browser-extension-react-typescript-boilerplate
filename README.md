@@ -9,6 +9,7 @@
 3. React-Router`多页面路由管理`
 4. localforage`存储方案，方便使用websql，localstorage`
 5. react-hook-form`表单校验`
+6. tea-component`UI组件`
 
 ## Installation
 
