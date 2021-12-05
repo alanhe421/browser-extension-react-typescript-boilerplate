@@ -1,4 +1,4 @@
-# Chrome Extension (built with TypeScript + React)
+# Chrome Extension(开发模版)
 
 > Chrome开发模版
 

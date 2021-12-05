@@ -24,8 +24,10 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "localforage": "^1.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^7.20.5",
     "react-router-dom": "^6.0.2"
   }
 }
