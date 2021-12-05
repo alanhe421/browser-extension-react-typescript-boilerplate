@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import "./Popup.less";
+import React, { useEffect } from 'react';
+import './Popup.less';
+import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
 
 export default function Popup() {
   useEffect(() => {
@@ -7,5 +8,19 @@ export default function Popup() {
     chrome.runtime.sendMessage({ popupMounted: true });
   }, []);
 
-  return <div className="popupContainer">Hello, world!</div>;
+  return <div className="popupContainer">
+    <Router>
+      <CustomRoutes/>
+    </Router>
+  </div>;
+}
+
+function CustomRoutes() {
+  return <Routes>
+    <Route index element={<LoginPage/>}/>
+  </Routes>;
+}
+
+function LoginPage() {
+  return <>login page</>;
 }
