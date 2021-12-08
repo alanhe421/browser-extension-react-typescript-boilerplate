@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './Popup.less';
+import './popup.less';
 import { Form, Input, Button } from 'tea-component';
 import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
