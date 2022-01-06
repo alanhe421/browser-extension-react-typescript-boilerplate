@@ -3,7 +3,7 @@
   "name": "react-typescript-boilerplate",
   "description": "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
   "version": "1.1.0",
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomrKzJvz3PNoXMP1G69FPxL/NrQWPgvFHNy0O6s+vE6fWZmSkaksP3Xa4RYeXyLkXwCNZkcznGH9rM0EshoXIMEYkwz1BidDV2emaZRBizEZQupmStgi3DmjN79crBdW8pePc8U7Pd2YX4tDsUvGVYuyE0Ycx5YeJOO3dcPKKUX2aoNIauut9WSupmXeZJhAHVS4Oc0+MWkbEoyrSG2y8EYFLrbG/8VEvANn7hUkEAKXlaiHTawmebZ8xQpgpttq9VTup1rSuRzqmDmKaZOiZjHMBSltu0IjO35v05E6apXv6EqpGjVoT140+phMOKMriwYUAZUPjULwEh96+z6CXQIDAQAB",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqohiV70bfTutnn6pYsB3Ui2k2PL+qr60kRH0zYURBR9rbAFMeeZjcuyy7TtLdzP9a+SIWQOi0BuUSoaEBsRK7bJZ+9uphvQ17b7HRR0qFXJ3f52N6EgqOzRuNUL3cQuswB2Sb9hd/gI5S3nWAHTRxKevIpBs5Bj8DLJGopnATOkknbI95sCKhCfuHf8BZbllUcjjhGIeUg0xJ1hbPSDkos8JYs+tNTLw/WRLHcYzi8rUlllu57DwOWp8wQbjv28L55qYIihrSi/5JmUvXMXD01jMeRUoAqBnAHwgOrSKfAfMaaJT84r6eUe8wiA2LP7BenzyZoZqPLIT6FXhJoI7UQIDAQAB",
   "browser_action": {
     "default_icon": "icon16.png",
     "default_popup": "popup.html"
