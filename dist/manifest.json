@@ -1,25 +1,23 @@
 {
-    "manifest_version": 2,
-    "name": "react-typescript-boilerplate",
-    "description":
-        "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
-    "version": "1.0.0",
-
-    "browser_action": {
-        "default_icon": "icon16.png",
-        "default_popup": "popup.html"
-    },
-
-    "background": {
-        "scripts": ["js/eventPage.js"],
-        "persistent": false
-    },
-
-    "icons": {
-        "16": "icon16.png",
-        "48": "icon48.png",
-        "128": "icon128.png"
-    },
-
-    "permissions": []
+  "manifest_version": 2,
+  "name": "react-typescript-boilerplate",
+  "description": "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
+  "version": "1.1.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomrKzJvz3PNoXMP1G69FPxL/NrQWPgvFHNy0O6s+vE6fWZmSkaksP3Xa4RYeXyLkXwCNZkcznGH9rM0EshoXIMEYkwz1BidDV2emaZRBizEZQupmStgi3DmjN79crBdW8pePc8U7Pd2YX4tDsUvGVYuyE0Ycx5YeJOO3dcPKKUX2aoNIauut9WSupmXeZJhAHVS4Oc0+MWkbEoyrSG2y8EYFLrbG/8VEvANn7hUkEAKXlaiHTawmebZ8xQpgpttq9VTup1rSuRzqmDmKaZOiZjHMBSltu0IjO35v05E6apXv6EqpGjVoT140+phMOKMriwYUAZUPjULwEh96+z6CXQIDAQAB",
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/eventPage.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": []
 }

@@ -6,7 +6,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
     "watch": "webpack -w --config webpack.dev.js",
-    "pack": "npm run build && cd dist && npx crx pack -p ./key.pem --zip-output ../dist/boilerplate.zip -o ../dist/boilerplate.crx"
+    "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx"
   },
   "author": "Joe Martella",
   "license": "MIT",
