@@ -10,6 +10,7 @@
 4. localforage`存储方案，方便使用indexedDB，localStorage`
 5. react-hook-form`表单校验`
 6. tea-component`UI组件`
+7. Popup/Background/Content/网页之间通讯机制
 
 ## Installation
 
