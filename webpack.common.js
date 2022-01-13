@@ -4,7 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
-    eventPage: path.join(__dirname, "src/eventPage.ts")
+    eventPage: path.join(__dirname, "src/event-page.ts")
   },
   output: {
     path: path.join(__dirname, "dist/js"),

@@ -6,7 +6,7 @@ import { Controller, useForm } from 'react-hook-form';
 
 export default function Popup() {
   useEffect(() => {
-    // Example of how to send a message to eventPage.ts.
+    // Example of how to send a message to event-page.ts.
     chrome.runtime.sendMessage({ popupMounted: true });
   }, []);
 
