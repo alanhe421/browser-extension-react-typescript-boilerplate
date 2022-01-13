@@ -18,3 +18,12 @@
 2. Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
 3. With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this
    repo
+
+## 常见几个问题
+
+### 网页发消息给插件
+
+```javascript
+const extensionId = 'mehfhkhbcmdecgfbcahndjjoooldhmdi';
+chrome.runtime.sendMessage(extensionId,{});
+```
