@@ -14,6 +14,27 @@
     ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_idle",
+      "css": [
+      ],
+      "js": [
+        "js/contentScript.js"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://*/*",
+      "https://*/*",
+      "http://127.0.0.1/*"
+    ]
+  },
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
