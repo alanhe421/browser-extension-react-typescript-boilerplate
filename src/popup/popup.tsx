@@ -6,11 +6,9 @@ import { Controller, useForm } from 'react-hook-form';
 import { app } from '../utils/utils';
 
 export default function Popup() {
-  return <div className="popupContainer">
-    <Router>
-      <CustomRoutes/>
-    </Router>
-  </div>;
+  return <Router>
+    <CustomRoutes/>
+  </Router>;
 }
 
 function CustomRoutes() {
@@ -60,8 +58,8 @@ function LoginPage() {
     </Form>
     <footer>
       v{
-        app.manifest.version
-      }
+      app.manifest.version
+    }
     </footer>
   </div>;
 }

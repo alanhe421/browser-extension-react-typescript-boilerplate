@@ -4,31 +4,32 @@
 // Chrome applies an 8px margin by default (gross).
 body {
   margin: 0;
+  height: 600px;
+  width: 357px;
+  overflow: hidden;
+}
+
+#popup {
+  height: 100%;
 }
 
 .popupContainer {
   display: flex;
   flex-direction: column;
   font-size: 20px;
-  height: 600px;
-  width: 357px;
 }
 
 .login {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
 
   .tea-form {
-    flex-grow: 1;
-    margin-top: 150px;
-    margin-bottom: 133px;
   }
 
   footer {
-    height: 100px;
     color: #ccc;
   }
 }
