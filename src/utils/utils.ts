@@ -1,3 +1,5 @@
+import Manifest = chrome.runtime.Manifest;
+
 export function pick<T, K extends keyof T>(obj: T, paths: K[] = []): Pick<T, K> {
   return paths.reduce((res: any, k) => {
     if (k in obj) {
@@ -18,3 +20,10 @@ export function omit<T, K extends keyof T>(obj: T, paths: K[] = []): Exclude<T, 
     { ...obj },
   );
 }
+
+/**
+ * 全局上下文一些信息
+ */
+export const app = {
+  manifest: chrome.runtime.getManifest(),
+};

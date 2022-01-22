@@ -3,6 +3,7 @@ import './popup.less';
 import { Form, Input, Button } from 'tea-component';
 import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
+import { app } from '../utils/utils';
 
 export default function Popup() {
   useEffect(() => {
@@ -62,5 +63,10 @@ function LoginPage() {
         登录
       </Button>
     </Form>
+    <footer>
+      v{
+        app.manifest.version
+      }
+    </footer>
   </div>;
 }
