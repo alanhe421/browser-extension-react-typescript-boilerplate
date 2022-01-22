@@ -20,7 +20,7 @@ chrome.runtime.onMessageExternal.addListener(
       {
         url: `popup.html`,
         type: 'popup',
-        height: 640,
+        height: 600,
         width: 357,
         left: 100,
         top: 100,
