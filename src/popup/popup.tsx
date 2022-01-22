@@ -1,9 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './popup.less';
-import { Form, Input, Button } from 'tea-component';
-import { Route, MemoryRouter as Router, Routes } from 'react-router-dom';
+import { Button, Form, Input } from 'tea-component';
+import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import { app } from '../utils/utils';
+
+const size = [document.body.clientWidth, document.body.clientHeight];  //public variable
+
+/**
+ * 禁止修改 popup弹窗大小，new window时无法直接设置禁用resize，因此通过该方法解决
+ */
+function resizeThrottler() {
+  window.resizeTo(size[0], size[1]);
+}
+
+window.addEventListener('resize', resizeThrottler, false);
 
 export default function Popup() {
   return <Router>
