@@ -1,4 +1,4 @@
-import Manifest = chrome.runtime.Manifest;
+
 
 export function pick<T, K extends keyof T>(obj: T, paths: K[] = []): Pick<T, K> {
   return paths.reduce((res: any, k) => {
@@ -27,3 +27,4 @@ export function omit<T, K extends keyof T>(obj: T, paths: K[] = []): Exclude<T, 
 export const app = {
   manifest: chrome.runtime.getManifest(),
 };
+

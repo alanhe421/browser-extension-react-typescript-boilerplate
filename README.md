@@ -25,5 +25,7 @@
 
 ```javascript
 const extensionId = 'mehfhkhbcmdecgfbcahndjjoooldhmdi';
-chrome.runtime.sendMessage(extensionId,{});
+chrome.runtime.sendMessage(extensionId, {name: 'google'}, (res) => {
+  console.log(res)
+});
 ```

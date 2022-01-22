@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
  * Fired when a message is sent from another extension/app
  */
 chrome.runtime.onMessageExternal.addListener(
-  (message, sender, sendResponse) => {
+  (request, sender, sendResponse) => {
     console.log('received!');
     chrome.windows.create(
       {
@@ -27,7 +27,11 @@ chrome.runtime.onMessageExternal.addListener(
         focused: true,
       },
     );
-    sendResponse({});
+    sendResponse({
+      data: {
+        message: request,
+      },
+    });
     return true;
   },
 );
