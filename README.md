@@ -28,3 +28,21 @@ chrome.runtime.sendMessage(extensionId, {name: 'google'}, (res) => {
   console.log(res)
 });
 ```
+
+### 业务代码中读取manifest配置
+> 全局已经注入了变量app.manifest用于获取相关配置
+
+```javascript
+// 获取版本号
+app.manifest.version
+
+```
+
+### 删除tea-component
+> 如果觉得内置的tea-component不合适，可以操作如下步骤进行卸载
+
+- /dist/popup.html中删除`<link rel="stylesheet" href="css/tea.css">`
+- webpack.common.js中删除CopyPlugin/copy样式操作
+  ```javascript
+  {from: "node_modules/tea-component/dist/tea.css", to: "../css"},
+  ```
