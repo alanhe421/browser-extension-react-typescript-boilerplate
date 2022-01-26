@@ -5,7 +5,7 @@ import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import { app } from '../utils/utils';
 
-const size = [document.body.clientWidth, document.body.clientHeight];  //public variable
+const size = [document.body.clientWidth, document.body.clientHeight];
 
 /**
  * 禁止修改 popup弹窗大小，new window时无法直接设置禁用resize，因此通过该方法解决

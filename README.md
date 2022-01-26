@@ -2,7 +2,7 @@
 
 > Chrome开发模版
 
-## include
+## 主要包含
 
 1. TypeScript`类型安全`
 2. Less`样式管理`
@@ -12,12 +12,11 @@
 6. tea-component`UI组件`
 7. Popup/Background/Content/网页之间通讯机制
 
-## Installation
+## 安装
 
-1. Complete the steps to build the project above
-2. Go to [_chrome://extensions_](chrome://extensions) in Google Chrome
-3. With the developer mode checkbox ticked, click **Load unpacked extension...** and select the _dist_ folder from this
-   repo
+1. 执行构建
+2. Chrome下访问 [_chrome://extensions_](chrome://extensions) 
+3. 打开开发者模式, 点击 **Load unpacked extension...** 选择该项目下的dist文件夹即可
 
 ## 常见问题
 
