@@ -32,5 +32,8 @@
     "react-hook-form": "^7.20.5",
     "react-router-dom": "^6.0.2",
     "tea-component": "^2.7.2"
+  },
+  "crxConfig": {
+    "issueURL": "https://github.com/alanhg/chrome-extension-react-typescript-boilerplate/issues"
   }
 }

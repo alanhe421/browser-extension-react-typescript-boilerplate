@@ -46,3 +46,8 @@ app.manifest.version
   ```javascript
   {from: "node_modules/tea-component/dist/tea.css", to: "../css"},
   ```
+
+### 全局常量配置
+
+- 模版库提供的方案是package.json中crxConfig自定义字段配置，代码中直接`CRX_CONFIG.xxx`消费即可
+- 当然可以直接代码中增加配置常量

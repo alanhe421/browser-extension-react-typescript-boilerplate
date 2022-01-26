@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
@@ -39,6 +40,9 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js"]
   },
   plugins: [
+    new webpack.DefinePlugin({
+      CRX_CONFIG: JSON.stringify(require('./package.json').crxConfig)
+    }),
     new CopyPlugin({
       patterns: [
         {from: "node_modules/tea-component/dist/tea.css", to: "../css"},
