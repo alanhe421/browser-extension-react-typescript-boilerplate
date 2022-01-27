@@ -1,16 +1,15 @@
 # Chrome Extension(开发模版)
 
-> Chrome开发模版
+> Chrome 扩展开发模板
 
 ## 主要包含
 
 1. TypeScript`类型安全`
 2. Less`样式管理`
-3. React-Router`多页面路由管理`
+3. React-Router`多页面内存路由管理`
 4. localforage`存储方案，方便使用indexedDB，localStorage`
 5. react-hook-form`表单校验`
 6. tea-component`UI组件`
-7. Popup/Background/Content/网页之间通讯机制
 
 ## 安装
 
