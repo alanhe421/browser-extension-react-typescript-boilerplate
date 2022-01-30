@@ -10,11 +10,12 @@
 4. localforage`存储方案，方便使用indexedDB，localStorage`
 5. react-hook-form`表单校验`
 6. tea-component`UI组件`
+7. Hot Reload`开发模式下，自动刷新`
 
 ## 安装
 
 1. 执行构建
-2. Chrome下访问 [_chrome://extensions_](chrome://extensions) 
+2. Chrome下访问 [_chrome://extensions_](chrome://extensions)
 3. 打开开发者模式, 点击 **Load unpacked extension...** 选择该项目下的dist文件夹即可
 
 ## 常见问题
@@ -29,6 +30,7 @@ chrome.runtime.sendMessage(extensionId, {name: 'google'}, (res) => {
 ```
 
 ### 业务代码中读取manifest配置
+
 > 全局已经注入了变量app.manifest用于获取相关配置
 
 ```javascript
@@ -38,6 +40,7 @@ app.manifest.version
 ```
 
 ### 删除tea-component
+
 > 如果觉得内置的tea-component不合适，可以操作如下步骤进行卸载
 
 - /dist/popup.html中删除`<link rel="stylesheet" href="css/tea.css">`
