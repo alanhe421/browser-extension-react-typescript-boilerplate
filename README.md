@@ -8,9 +8,10 @@
 2. Less`样式管理`
 3. React-Router`多页面内存路由管理`
 4. localforage`存储方案，方便使用indexedDB，localStorage`
-5. react-hook-form`表单校验`
-6. tea-component`UI组件`
-7. Hot Reload`开发模式下，自动刷新`
+5. [zustand`状态管理，弥补Context的不足`](https://github.com/pmndrs/zustand)
+6. react-hook-form`表单校验`
+7. tea-component`UI组件`
+8. Hot Reload`开发模式下，自动刷新`
 
 ## 安装
 

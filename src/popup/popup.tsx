@@ -4,6 +4,7 @@ import { Button, Form, Input } from 'tea-component';
 import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import { app } from '../utils/utils';
+import create from 'zustand';
 
 const size = [document.body.clientWidth, document.body.clientHeight];
 
@@ -15,6 +16,19 @@ function resizeThrottler() {
 }
 
 window.addEventListener('resize', resizeThrottler, false);
+
+/**
+ * 全局状态管理
+ */
+interface AppState {
+  loginCount: number;
+  addLoginCount: () => void;
+}
+
+const useAppStore = create<AppState>(set => ({
+  loginCount: 0,
+  addLoginCount: () => set(state => ({ loginCount: state.loginCount + 1 })),
+}));
 
 export default function Popup() {
   return <Router>
@@ -29,6 +43,8 @@ function CustomRoutes() {
 }
 
 function LoginPage() {
+  const addLoginCount = useAppStore(state => state.addLoginCount);
+  const loginCount = useAppStore(state => state.loginCount);
   const {
     control, formState: {
       isValid,
@@ -63,8 +79,8 @@ function LoginPage() {
                     </Form.Item>;
                   }
                   }/>
-      <Button type={'primary'} disabled={!isValid}>
-        登录
+      <Button type={'primary'} disabled={!isValid} onClick={() => addLoginCount()}>
+        登录{loginCount}
       </Button>
     </Form>
     <footer>
