@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+  "name": "react-typescript-boilerplate",
+  "description": "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
+  "version": "_",
+  "minimum_chrome_version": "72",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqohiV70bfTutnn6pYsB3Ui2k2PL+qr60kRH0zYURBR9rbAFMeeZjcuyy7TtLdzP9a+SIWQOi0BuUSoaEBsRK7bJZ+9uphvQ17b7HRR0qFXJ3f52N6EgqOzRuNUL3cQuswB2Sb9hd/gI5S3nWAHTRxKevIpBs5Bj8DLJGopnATOkknbI95sCKhCfuHf8BZbllUcjjhGIeUg0xJ1hbPSDkos8JYs+tNTLw/WRLHcYzi8rUlllu57DwOWp8wQbjv28L55qYIihrSi/5JmUvXMXD01jMeRUoAqBnAHwgOrSKfAfMaaJT84r6eUe8wiA2LP7BenzyZoZqPLIT6FXhJoI7UQIDAQAB",
+  "browser_action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "js/eventPage.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_idle",
+      "css": [
+      ],
+      "js": [
+        "js/contentScript.js"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "http://127.0.0.1/*"
+    ]
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
