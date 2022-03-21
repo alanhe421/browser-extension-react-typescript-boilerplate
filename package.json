@@ -13,6 +13,7 @@
     "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx"
   },
   "dependencies": {
+    "chrome-tab-identifier": "0.0.1",
     "localforage": "^1.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
