@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './popup.less';
 import { Button, Form, Input } from 'tea-component';
 import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
@@ -53,6 +53,10 @@ function LoginPage() {
     mode: 'onBlur',
   });
 
+  const handleClick = useCallback(() => {
+    window.open(CRX_CONFIG.issueURL);
+  }, []);
+
   return <div className={'login'}>
     <Form layout={'vertical'}>
       <Controller name={'username'}
@@ -86,7 +90,7 @@ function LoginPage() {
     <footer>
       v{
       app.manifest.version
-    }
+    }，<a onClick={handleClick}>issue url</a>
     </footer>
   </div>;
 }

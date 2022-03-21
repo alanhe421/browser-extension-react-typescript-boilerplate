@@ -1,16 +1,11 @@
 {
-  "manifest_version": 3,
   "name": "react-typescript-boilerplate",
   "description": "A boilerplate project to quickly build a Chrome extension using TypeScript and React (built using webpack).",
   "version": "_",
-  "minimum_chrome_version": "72",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqohiV70bfTutnn6pYsB3Ui2k2PL+qr60kRH0zYURBR9rbAFMeeZjcuyy7TtLdzP9a+SIWQOi0BuUSoaEBsRK7bJZ+9uphvQ17b7HRR0qFXJ3f52N6EgqOzRuNUL3cQuswB2Sb9hd/gI5S3nWAHTRxKevIpBs5Bj8DLJGopnATOkknbI95sCKhCfuHf8BZbllUcjjhGIeUg0xJ1hbPSDkos8JYs+tNTLw/WRLHcYzi8rUlllu57DwOWp8wQbjv28L55qYIihrSi/5JmUvXMXD01jMeRUoAqBnAHwgOrSKfAfMaaJT84r6eUe8wiA2LP7BenzyZoZqPLIT6FXhJoI7UQIDAQAB",
   "action": {
     "default_icon": "icon16.png",
     "default_popup": "popup.html"
-  },
-  "background": {
-    "service_worker": "js/eventPage.js"
   },
   "content_scripts": [
     {
@@ -22,7 +17,7 @@
       "css": [
       ],
       "js": [
-        "js/contentScript.js"
+        "contentScript.js"
       ]
     }
   ],
@@ -42,18 +37,5 @@
   ],
   "host_permissions": [
     "*://*/*"
-  ],
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  },
-  "web_accessible_resources": [
-    {
-      "resources": [
-        "popup.html"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
   ]
 }
