@@ -1,6 +1,6 @@
-# Chrome Extension(开发模版)
+# Browser Extension(开发模版)
 
-> Chrome 扩展开发模板
+> 扩展开发模板
 
 ## 主要包含
 
@@ -12,6 +12,7 @@
 6. react-hook-form`表单校验`
 7. tea-component`UI组件`
 8. Hot Reload`开发模式下，自动刷新`
+9. 支持不同浏览器打包`支持Chrome，Firefox留有口子，但还未支持`
 
 ## 安装
 
