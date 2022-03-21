@@ -8,7 +8,7 @@ module.exports = {
     eventPage: path.join(__dirname, "src/event-page.ts"),
     contentScript: path.join(__dirname, "src/content-script.ts"),
   }, output: {
-    path: path.join(__dirname, "dist/js"), filename: "[name].js"
+    path: path.join(__dirname, "dist/"), filename: "[name].js"
   }, module: {
     rules: [{
       exclude: /node_modules/, test: /\.tsx?$/, use: "ts-loader"
@@ -26,8 +26,8 @@ module.exports = {
   }, plugins: [new webpack.DefinePlugin({
     CRX_CONFIG: JSON.stringify(require('./package.json').crxConfig)
   }), new CopyPlugin({
-    patterns: [{from: "node_modules/tea-component/dist/tea.css", to: "../css"}, {
-      from: "src/images", to: "../"
-    }, {from: "src/popup.html", to: "../"},],
+    patterns: [{from: "node_modules/tea-component/dist/tea.css", to: path.join(__dirname, 'dist/css')}, {
+      from: "src/images", to: path.join(__dirname, 'dist')
+    }, {from: "src/popup.html", to: path.join(__dirname, 'dist')},],
   }),],
 };
