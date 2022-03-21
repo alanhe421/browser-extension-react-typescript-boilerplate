@@ -15,10 +15,15 @@
 9. 支持不同浏览器打包`支持Chrome，Firefox留有口子，但还未支持`
 
 ## 安装
-
+### Chrome
 1. 执行构建
 2. Chrome下访问 [_chrome://extensions_](chrome://extensions)
 3. 打开开发者模式, 点击 **Load unpacked extension...** 选择该项目下的dist文件夹即可
+
+
+### Firefox
+1. `about:debugging#/runtime/this-firefox`
+
 
 ## 常见问题
 

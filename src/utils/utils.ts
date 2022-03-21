@@ -1,5 +1,3 @@
-
-
 export function pick<T, K extends keyof T>(obj: T, paths: K[] = []): Pick<T, K> {
   return paths.reduce((res: any, k) => {
     if (k in obj) {
