@@ -12,7 +12,7 @@
 6. react-hook-form`表单校验`
 7. tea-component`UI组件`
 8. Hot Reload`开发模式下，自动刷新`
-9. 支持不同浏览器打包`支持Chrome，Firefox`
+9. 支持浏览器`Chrome，Firefox，Edge`
 10. 网页JS方式向插件发送消息，接收消息
 
 ## 安装
