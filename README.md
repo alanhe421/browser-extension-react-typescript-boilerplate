@@ -12,7 +12,8 @@
 6. react-hook-form`表单校验`
 7. tea-component`UI组件`
 8. Hot Reload`开发模式下，自动刷新`
-9. 支持不同浏览器打包`支持Chrome，Firefox留有口子，但还未支持`
+9. 支持不同浏览器打包`支持Chrome，Firefox`
+10. 网页JS方式向插件发送消息，接收消息
 
 ## 安装
 ### Chrome
@@ -30,10 +31,7 @@
 ### 网页发消息给插件
 
 ```javascript
-const extensionId = 'mehfhkhbcmdecgfbcahndjjoooldhmdi';
-chrome.runtime.sendMessage(extensionId, {name: 'google'}, (res) => {
-  console.log(res)
-});
+window.extSdk.sendMessage('123')
 ```
 
 ### 业务代码中读取manifest配置
