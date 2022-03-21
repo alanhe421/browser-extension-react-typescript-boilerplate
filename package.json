@@ -5,7 +5,9 @@
   "license": "MIT",
   "author": "Joe Martella",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "npm run build:chrome",
+    "build:chrome": "node development/manifest.js --platform=chrome && webpack --config webpack.prod.js",
+    "build:firefox": "node development/manifest.js --platform=firefox && webpack --config webpack.prod.js",
     "dev": "webpack --config webpack.dev.js",
     "watch": "webpack -w --config webpack.dev.js",
     "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx"
@@ -17,6 +19,7 @@
     "react-hook-form": "^7.20.5",
     "react-router-dom": "^6.0.2",
     "tea-component": "^2.7.2",
+    "yargs": "^17.4.0",
     "zustand": "^3.7.0"
   },
   "devDependencies": {
