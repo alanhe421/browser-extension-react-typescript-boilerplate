@@ -9,19 +9,19 @@ const store = localforage.createInstance({
   driver: localforage.INDEXEDDB,
 });
 
-export default class StorageUtils {
+const localForgeUtils = {
 
   /**
    * @param expire 单位是秒
    */
-  static async setData<T>(key: string, data: T, expire: number | false) {
+  setData: async <T>(store: LocalForage, key: string, data: T, expire: number | false) => {
     await store.setItem(key, {
       expire: typeof expire === 'number' ? Date.now() + expire * 1000 : expire,
       data,
     });
-  }
+  },
 
-  static async getData<T>(key: string) {
+  getData: async <T>(store: LocalForage, key: string): Promise<any> => {
     const expireData: {
       expire: number,
       data: T
@@ -34,13 +34,27 @@ export default class StorageUtils {
       return expireData.data;
     }
     return null;
+  },
+  removeData: <T>(store: LocalForage, key: string) => {
+    store.removeItem(key);
+  },
+};
+
+export default class StorageUtils {
+
+  static getWindowId() {
+    return localForgeUtils.getData(store, `window_id`);
   }
 
-  static async removeData<T>(key: string) {
-    await store.removeItem(key);
+  static setWindowId(id: number) {
+    return localForgeUtils.setData(store, `window_id`, id, false);
   }
 
-  static saveToken(token: string) {
-    StorageUtils.setData('token', token, false);
+  static setDebug(debug: boolean) {
+    localStorage.setItem('debug', String(debug));
+  }
+
+  static getDebug() {
+    return localStorage.getItem('debug') === 'true';
   }
 }

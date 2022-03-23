@@ -1,4 +1,5 @@
 import { TabIdentifier } from 'chrome-tab-identifier';
+import StorageUtils from './utils/storage';
 
 const tabIdentifier = new TabIdentifier();
 
@@ -22,13 +23,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       left: 100,
       top: 100,
       focused: true,
-    },
+    },async (v) => {
+      const existVid = await StorageUtils.getWindowId();
+      await StorageUtils.setWindowId(v.id);
+      existVid && chrome.windows.get(existVid, window => {
+        window && chrome.windows.remove(existVid);
+      });
+      sendResponse({
+        data: {
+          message: request,
+        },
+      });
+    }
   );
-  sendResponse({
-    data: {
-      message: request,
-    },
-  });
   return isResponseAsync;
 });
 

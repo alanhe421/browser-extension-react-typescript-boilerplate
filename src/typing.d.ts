@@ -3,6 +3,10 @@ export {};
 declare global {
   interface Window {
     extSdk: {
+      /**
+       * 插件版本
+       */
+      version: string;
       sendMessage: (msg: string) => void;
     };
   }
