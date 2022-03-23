@@ -36,6 +36,9 @@ export default function Popup() {
   </Router>;
 }
 
+/**
+ * 路由系统
+ */
 function CustomRoutes() {
   return <Routes>
     <Route index element={<LoginPage/>}/>

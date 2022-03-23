@@ -1,5 +1,8 @@
 import * as localforage from 'localforage';
 
+/**
+ * WebSQL已不提倡，这里推荐使用IndexDB或localStorage，两者区别在于存储大小限制
+ */
 const store = localforage.createInstance({
   name: 'boilerplate',
   version: 1.0,

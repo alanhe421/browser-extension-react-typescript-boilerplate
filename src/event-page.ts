@@ -40,3 +40,9 @@ chrome.runtime.onMessageExternal.addListener(
     return true;
   },
 );
+
+/**
+ * 浏览器关闭
+ */
+chrome.windows.onRemoved.addListener(_windowId => {
+});
