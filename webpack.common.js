@@ -27,7 +27,8 @@ module.exports = {
     CRX_CONFIG: JSON.stringify(require('./package.json').crxConfig)
   }), new CopyPlugin({
     patterns: [{from: "node_modules/tea-component/dist/tea.css", to: path.join(__dirname, 'dist/css')}, {
-      from: "src/images", to: path.join(__dirname, 'dist')
+      from: "src/images", to: path.join(__dirname, 'dist/images'),
+      from: "src/logo", to: path.join(__dirname, 'dist/logo'),
     }, {from: "src/popup.html", to: path.join(__dirname, 'dist')},],
   }),],
 };
