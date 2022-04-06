@@ -18,6 +18,11 @@ function resizeThrottler() {
 window.addEventListener('resize', resizeThrottler, false);
 
 /**
+ * 与background.js建立连接
+ */
+chrome.runtime.connect({ name: 'popup' });
+
+/**
  * 全局状态管理
  */
 interface AppState {

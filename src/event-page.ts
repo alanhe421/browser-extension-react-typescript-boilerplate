@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       left: 100,
       top: 100,
       focused: true,
-    },async (v) => {
+    }, async (v) => {
       const existVid = await StorageUtils.getWindowId();
       await StorageUtils.setWindowId(v.id);
       existVid && chrome.windows.get(existVid, window => {
@@ -34,7 +34,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           message: request,
         },
       });
-    }
+    },
   );
   return isResponseAsync;
 });
@@ -52,4 +52,12 @@ chrome.runtime.onMessageExternal.addListener(
  * 浏览器关闭
  */
 chrome.windows.onRemoved.addListener(_windowId => {
+});
+
+chrome.runtime.onConnect.addListener(function (port) {
+  if (port.name === 'popup') {
+    port.onDisconnect.addListener(async function () {
+      console.log('popup has been closed');
+    });
+  }
 });
