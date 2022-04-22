@@ -6,8 +6,8 @@
 
 1. TypeScript`类型安全`
 2. Less`样式管理`
-3. React-Router`多页面内存路由管理`
-4. localforage`存储方案，方便使用indexedDB，localStorage`
+3. [React-Router`多页面内存路由管理`](https://reactrouter.com/docs/en/v6)
+4. [localforage`存储方案，方便使用indexedDB，localStorage`](https://github.com/localForage/localForage/tree/711d5891dfc699705f086c2bec4c68d6c363c8ff)
 5. [zustand`状态管理，弥补Context的不足`](https://github.com/pmndrs/zustand)
 6. react-hook-form`表单校验`
 7. tea-component`UI组件`
