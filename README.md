@@ -15,6 +15,23 @@
 9. 支持浏览器`Chrome，Firefox，Edge`
 10. `网页JS-window属性`方式向插件发送消息，接收消息
 
+## 开发
+
+```
+# 开发版打包，包含sourcemap
+npm run build:dev
+
+## 生产打包，不同平台打包见scripts定义
+npm run build:prod
+
+## crx文件打包
+npm run pack
+
+## 热更开发调试
+npm run dev
+
+```
+
 ## 安装
 
 ### Chrome
