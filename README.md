@@ -17,7 +17,7 @@
 
 ## 开发
 
-```
+```shell
 # 开发版打包，包含sourcemap
 npm run build:dev
 
