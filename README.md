@@ -13,18 +13,19 @@
 7. tea-component`UI组件`
 8. Hot Reload`开发模式下，自动刷新`
 9. 支持浏览器`Chrome，Firefox，Edge`
-10. 网页JS方式向插件发送消息，接收消息
+10. `网页JS-window属性`方式向插件发送消息，接收消息
 
 ## 安装
+
 ### Chrome
+
 1. 执行构建
 2. Chrome下访问 [_chrome://extensions_](chrome://extensions)
 3. 打开开发者模式, 点击 **Load unpacked extension...** 选择该项目下的dist文件夹即可
 
-
 ### Firefox
-1. `about:debugging#/runtime/this-firefox`
 
+1. `about:debugging#/runtime/this-firefox`
 
 ## 常见问题
 
@@ -33,6 +34,8 @@
 ```javascript
 window.extSdk.sendMessage('123')
 ```
+
+### 网页接收来自插件消息
 
 ### 业务代码中读取manifest配置
 
