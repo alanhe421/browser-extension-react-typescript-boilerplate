@@ -5,12 +5,13 @@
   "license": "MIT",
   "author": "Joe Martella",
   "scripts": {
-    "build": "npm run build:chrome",
-    "build:chrome": "node development/manifest.js --platform=chrome && webpack --config webpack.prod.js",
-    "build:firefox": "node development/manifest.js --platform=firefox && webpack --config webpack.prod.js",
-    "dev": "webpack --config webpack.dev.js",
-    "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx",
-    "watch": "webpack -w --config webpack.dev.js"
+    "build": "npm run build:prod:chrome",
+    "build:dev": "node development/manifest.js --platform=chrome && webpack --config webpack.dev.js",
+    "build:prod": "npm run build:prod:chrome",
+    "build:prod:chrome": "node development/manifest.js --platform=chrome && webpack --config webpack.prod.js",
+    "build:prod:firefox": "node development/manifest.js --platform=firefox && webpack --config webpack.prod.js",
+    "dev": "webpack -w --config webpack.dev.js --reload=true",
+    "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx"
   },
   "dependencies": {
     "chrome-tab-identifier": "0.0.1",

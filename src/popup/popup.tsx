@@ -96,9 +96,12 @@ function LoginPage() {
       </Button>
     </Form>
     <footer>
-      v{
-      app.manifest.version
-    }，<a onClick={handleClick}>issue url</a>
+      <p>
+        v{
+        app.manifest.version
+      }
+      </p>
+      <a onClick={handleClick}>issue url</a>
     </footer>
   </div>;
 }
