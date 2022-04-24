@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import './popup.less';
 import { Button, Form, Input } from 'tea-component';
 import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
 import { Controller, useForm } from 'react-hook-form';
 import { app } from '../utils/utils';
 import create from 'zustand';
+import StorageUtils from '../utils/storage';
 
 const size = [document.body.clientWidth, document.body.clientHeight];
 
@@ -65,7 +66,10 @@ function LoginPage() {
     window.open(CRX_CONFIG.issueURL);
   }, []);
 
-  console.log('Class: LoginPage, Function: LoginPage, Line 67, Param: production', prod);
+
+  useEffect(() => {
+    StorageUtils.setLoginCount(addLoginCount);
+  }, [addLoginCount]);
 
   return <div className={'login'}>
     <Form layout={'vertical'}>
@@ -93,7 +97,9 @@ function LoginPage() {
                     </Form.Item>;
                   }
                   }/>
-      <Button type={'primary'} disabled={!isValid} onClick={() => addLoginCount()}>
+      <Button type={'primary'} disabled={!isValid} onClick={() => {
+        addLoginCount();
+      }}>
         登录{loginCount}
       </Button>
     </Form>

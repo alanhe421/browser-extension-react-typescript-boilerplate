@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
-const {prod} = require("./src/typing");
 module.exports = (env = {}) => ({
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
