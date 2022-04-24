@@ -1,7 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
-module.exports = {
+const {prod} = require("./src/typing");
+module.exports = (env = {}) => ({
   entry: {
     popup: path.join(__dirname, "src/popup/index.tsx"),
     eventPage: path.join(__dirname, "src/event-page.ts"),
@@ -24,11 +25,14 @@ module.exports = {
   }, resolve: {
     extensions: [".ts", ".tsx", ".js"]
   }, plugins: [new webpack.DefinePlugin({
-    CRX_CONFIG: JSON.stringify(require('./package.json').crxConfig)
+    CRX_CONFIG: JSON.stringify(require('./package.json').crxConfig),
+    prod: env.prod
   }), new CopyPlugin({
     patterns: [{from: "node_modules/tea-component/dist/tea.css", to: path.join(__dirname, 'dist/css')}, {
-      from: "src/images", to: path.join(__dirname, 'dist/images'),
-      from: "src/logo", to: path.join(__dirname, 'dist/logo'),
+      from: "src/images",
+      to: path.join(__dirname, 'dist/images'),
+      from: "src/logo",
+      to: path.join(__dirname, 'dist/logo'),
     }, {from: "src/popup.html", to: path.join(__dirname, 'dist')},],
   }),],
-};
+});

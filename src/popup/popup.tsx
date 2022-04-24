@@ -65,6 +65,8 @@ function LoginPage() {
     window.open(CRX_CONFIG.issueURL);
   }, []);
 
+  console.log('Class: LoginPage, Function: LoginPage, Line 67, Param: production', prod);
+
   return <div className={'login'}>
     <Form layout={'vertical'}>
       <Controller name={'username'}

@@ -6,11 +6,11 @@
   "author": "Joe Martella",
   "scripts": {
     "build": "npm run build:prod:chrome",
-    "build:dev": "node development/manifest.js --platform=chrome && webpack --config webpack.dev.js",
+    "build:dev": "node development/manifest.js --platform=chrome && webpack --config webpack.dev.js --env.prod=false",
     "build:prod": "npm run build:prod:chrome",
-    "build:prod:chrome": "node development/manifest.js --platform=chrome && webpack --config webpack.prod.js",
-    "build:prod:firefox": "node development/manifest.js --platform=firefox && webpack --config webpack.prod.js",
-    "dev": "webpack -w --config webpack.dev.js --env.reload=true",
+    "build:prod:chrome": "node development/manifest.js --platform=chrome && webpack --config webpack.prod.js --env.prod=true",
+    "build:prod:firefox": "node development/manifest.js --platform=firefox && webpack --config webpack.prod.js --env.prod=true",
+    "dev": "webpack -w --config webpack.dev.js --env.reload=true --env.prod=false",
     "pack": "npm run build && cd dist && npx crx pack -p ./key.pem -o ../dist/boilerplate.crx"
   },
   "dependencies": {

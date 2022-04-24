@@ -17,5 +17,8 @@ declare global {
   const CRX_CONFIG: {
     issueURL: string;
   };
-
+  /**
+   * 是否是生产打包
+   */
+  const prod: boolean;
 }
